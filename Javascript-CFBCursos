@@ -1,0 +1,565 @@
+	 =====================
+	       Aula 01 Alta relevançia
+	 =====================
+
+// 	 ---------------------
+//           Comentários
+//  	 ---------------------
+/* */    //Comentário de bloco de código
+//       //Comentário de linha de código
+
+
+//  	 ---------------------
+//              Comandos
+//     	 ---------------------
+console.log('Olá Mundo'); // Comando que faz a impressão no console.
+
+
+	 =====================
+	       Aula 02 Média relevançia
+	 =====================
+	 
+	 
+//  	 ---------------------
+//            Modo Strict
+//     	 ---------------------
+"use strict" // Modo strito não permite a execução de variáveis não declaradas com let const e var.
+
+nome="Emerson"
+console.log(nome);
+
+
+	 =====================
+	       Aula 03 Alta relevançia
+	 =====================
+	 
+	 
+//     --------------------------
+//          Scopo de Variáveis
+//     --------------------------
+
+VAR, LET E CONST => Todas ao serém declaradas no scopo global, podém ser acessada de 
+		    dentro de uma função ou de estruturas condicionais e de repetições
+		    
+VAR, LET => Ambas ao serém declaradas no scopo global, podém ser alteradas de dentro
+	    de uma função ou de estruturas condicionais e de repetições
+	    
+CONST => não pode ser alterada em nenhum tipo de scopo;
+
+CONCLUSÃO => O LET e o CONST nos dá mais segurançã em relação ao escopo que estamos declarando.
+
+QUANDO ALTERA O VALOR DA VARIÁVEL => O Javascript realiza a troca de tipo de forma automática, 
+				     porém é importante lembrar que isso pode ser uma grande 'ARMADILHA';
+				     
+				     
+				     
+				     
+				     
+	 =====================
+	       Aula 04 Alta relevançia
+	 =====================
+	 
+	 
+//     --------------------------
+//      Operadores aritiméticos
+//     --------------------------
+______________________________________________
+| + | - | * | / | % | ++ | -- | += | -= | *= | 
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+
+
+	 =====================
+	       Aula 05 Alta relevançia
+	 =====================
+
+//     --------------------------
+//      Operadores relacionais
+//     --------------------------
+
+
+O operadores relacionais fazem a comparação entre valores retornando [ TRUE ] OU [ FALSE ]
+_________________________________________
+| == | === | != | !== | > | >= | < | <= |
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+
+
+
+	 =====================
+	       Aula 06 Média relevançia
+	 =====================
+
+//     --------------------------
+//      Verificação de dispositivo
+//     --------------------------
+
+navigator.userAgent.match(/Android/i);
+navigator.userAgent.match(/webOS/i);
+navigator.userAgent.match(/iPhone|iPad|iPod/i);
+navigator.userAgent.match(/BlackBerry/i);
+navigator.userAgent.match(/Windows Phone/i);
+navigator.userAgent.match(/Opera Mini/i);
+navigator.userAgent.match(/IEMobile/i);
+
+
+
+
+	 =====================
+	       Aula 07 Alta relevançia 
+	 =====================
+
+//     --------------------------
+//         Operadores lógicos
+//     --------------------------
+ 	_______________
+ 	| || | && | ! |
+ 	TTTTTTTTTTTTTTT
+ 	
+
+	 =====================
+	       Aula 08 Baixa relevançia 
+	 =====================
+
+//     --------------------------
+//         Operadores bitwise
+//     --------------------------
+
+São |,  &, ^ => ele fazem comparações lógicas bit a bit
+
+^ Ou exclusivo.
+>>1 Desloca o bite para direita reduz o valor pela metade
+<<1 Descoca o bite para esquerda dobra o valor.
+
+Operadores Bit a Bit podém ter uma larga escala de usabilidade por simplificar 
+algumas funcionalidades como verificação, porém é um assunto a ser explorado 
+em um nível intermediário para maior proveito.
+
+
+
+	 =====================
+	       Aula 09 Média relevançia 
+	 =====================
+
+//     --------------------------
+//         Pós e pré incremento
+//     --------------------------
+
+let n=10;
+
+// Operador de pós incremento, portanto primeiro lê e depois incrementa
+console.log(n++);
+console.log(n);
+
+// Operador pré incremento, primeiro incrementa depois lê
+
+console.log(++n);
+console.log(n);
+
+let x=-n
+imprime -10
+O [ - ] é um operador de inversão
+
++ Operador de concatenação quando usado em string
+
+
+
+
+ 	 ==================================
+	       Aula 10 Média relevançia 
+	 ==================================
+
+//    ----------------------------------
+//         Operador ternário
+//    ----------------------------------
+
+
+// Simplifica o teste lógico evitando usar o [ if ] em situações simples como o exemplo abaixo
+let num = 10;
+let res = (num%2 ? "Par" : "Impar")
+console.log(res);
+
+
+
+
+ 	 ==================================
+	       Aula 11 Alta relevançia 
+	 ==================================
+
+//    ----------------------------------
+//         Operador typeof (Unário)
+//    ----------------------------------
+
+
+let dados = {
+    nome:"Emerson",
+    idade: 31,
+    email: "emersonmarinscoutinho@gmail.com"
+};
+
+console.log(typeof dados);
+dados = JSON.stringify(dados);
+
+console.log(typeof dados);
+
+dados = JSON.parse(dados);
+
+console.log(typeof dados);
+
+
+
+
+
+
+ 	 ==================================
+	       Aula 12 Altíssima relevançia 
+	 ==================================
+
+//    ----------------------------------
+//         Operador Spread
+//    ----------------------------------
+
+
+let n1=[11,20,30];
+let n2=[11,22,33,44,55];
+let n3=[...n1,...n2];
+
+console.log("n1: " + n1);
+console.log("n2: " + n1);
+console.log("n3: " + n1);
+
+
+// Nesse caso o operador Spread irá juntar as duas informações dos dois obj
+// que são diferente.
+const jogador1={nome:"Emerson",energia:100, vidas:"5", magia:150};
+const jogador2={nome:"Bruce",energia:100, vidas:"2", velocidade:80};
+const jogador3={...jogador1,...jogador2};
+
+console.log(jogador3);
+/*
+emerson@emerson-C2SBC-Q:~/Documentos/GitHub-Estudos/JavaScript-CFBCursos$ 
+{ nome: 'Bruce', energia: 100, vidas: '2', magia: 150, velocidade: 80 }
+*/
+
+
+
+// Pega os valores e espalha para os paremetros da função
+const soma=(v1,v2,v3)=>{
+    return v1+v2+v3
+}
+
+let valores=[1,5,4,6,10]
+
+console.log(soma(...valores))
+
+// O Spread é muito util quando pega uma coleção de elementos no DOM 
+// pois permiti usar vários métodos já que ao invés de ser um HTMLCollection(3) se torna um Array
+// evitando o famoso erro quando se utiliza o método " foreach ";
+const objs1 = document.getElementsByTagName("div");
+const objs2 = [...document.getElementsByTagName("div")];
+
+objs2.forEach(element => {
+    console.log(element.innerText);
+    console.log("Cada elemento do array é uma: "+typeof(element.innerText)+". Correspondente ao valor: "+element.innerText);
+    element.innerText = "Veja só o que podemos fazer!!!";
+});
+objs1.forEach(element => {
+    console.log(element);
+});
+
+console.log(objs1);
+console.log(objs2);
+
+
+
+ 	 ==================================
+	       Aula 13 Alta relevançia
+	 ==================================
+
+//    ----------------------------------
+//         Condicional IF e IF ELSE
+//    ----------------------------------
+
+
+if((a == b && 10 > (a+b) ) || c% == 2) {
+	console.log('ok');
+}
+
+
+
+
+ 	 ==================================
+	       Aula 14 Alta relevançia
+	 ==================================
+//    ---------------
+//         Switch
+//    ---------------
+
+
+let colocacao=1;
+
+
+// O comando Break para a execução do Switch
+switch(colocacao){
+    case 1:
+        console.log("Primeiro Lugar")
+        break
+    case 2:
+        console.log("Segundo Lugar")
+        break
+    case 3:
+        console.log("Terceiro Lugar")
+        break
+    case 4:  case 5: case 6:
+        console.log("Prêmio de participação")
+        break 
+    default:
+        console.log("Não subiu ao podio")
+        break
+}
+
+
+
+
+
+ 	 ==================================
+	       Aula 15 Alta relevançia
+	 ==================================
+//    --------------------------
+//         FOR Loop definido
+//    --------------------------
+
+Loop definido se usa quando se sabe a quantidades de vezes que irá interar o bloco de comandos
+Já o loop WHILE é quando não se sabe a quantidade das vezes que se deve interar por isso é um loop INDEFINIDO
+
+
+
+
+
+
+ 	 ==================================
+	       Aula 16 Alta relevançia
+	 ==================================
+//    --------------------------
+//         FOR IN e FOR OF
+//    --------------------------
+
+
+let num=[1,5,50,88,66,44,11,55,61];
+let num1=["vamos","começar",50,88,66,45,75,55,61];
+
+
+// No for in ele imprime o index na key, ele simplifica a vida na hora de percorrer coleções em comparação ao for normal
+for (const key in num) {
+    if (Object.hasOwnProperty.call(num, key)) {
+        const element = num[key];
+        console.log(element);
+    };
+};
+
+// Já no for of ele imprime cada item do array no iterator,ele simplifica a vida na hora de percorrer coleções em comparação ao for normal
+for (const iterator of num1) {
+    console.log(iterator);
+};
+
+
+
+
+
+
+ 	 ==================================
+	       Aula 17 Alta relevançia
+	 ==================================
+
+//    --------------------------
+//         WHILE indefinido
+//    --------------------------
+
+
+
+let n=0;
+let n1 = 10;
+let fat = 1;
+
+// while(n<10) {
+//     console.log(n)
+//     n++
+// }
+
+while(1 <= n1){
+    fat *= n1;
+    n1--
+}
+
+console.log(fat);
+
+
+
+
+
+
+ 	 ==================================
+	       Aula 18 Alta relevançia
+	 ==================================
+
+//    --------------------------
+//         DO WHILE indefinido
+//    --------------------------
+
+
+let text = "Emerson";
+let n = 0;
+
+
+// Executa o primeiro bloco de código pra depois verificar a condição 
+do {
+    console.log(text);
+    n++
+}while(10 > n);
+
+
+
+ 	 ==================================
+	       Aula 19 Alta relevançia
+	 ==================================
+
+//    --------------------------
+//         BREAK e CONTINUE
+//    --------------------------
+let text = "Emerson";
+let n = 0;
+let n1 = 0;
+let n2 = 0;
+
+
+// Quando ele chega a satisfazer a condição ele se depara com o break que para a execução do loop
+// Esse comando é importante quando se faz a interação de um array procurando por algum elemento específico
+// Pois ao encontra-lo o programa não continuará executando o código desnessáriamente.
+
+
+
+
+	 ==================================
+	       Aula 20 FUNÇÃO relevançia
+	 ==================================
+
+//    -------------------
+//         FUNÇÕES
+//    -------------------
+let text = "Emerson";
+let n = 0;
+let n1 = 0;
+let n2 = 0;
+
+
+
+let div_all = [...document.getElementsByTagName('div')];
+
+
+function mudartexto() {
+    
+    for (const iterator of div_all) {
+
+        console.log(iterator.innerHTML) 
+        if (iterator.innerHTML == "<hr>") {
+            continue
+        }
+        iterator.innerHTML = "MUDEI O TEXTO";
+    }
+    
+}
+
+
+
+
+
+	 ==================================
+	       Aula 21 FUNÇÃO relevançia
+	 ==================================
+
+//    -------------------
+//         RETURN
+//    -------------------
+
+
+// Retorna um valor a quem a chamou e não executa mais nenhum código abaixo do  return que esteja no mesmo escopo.
+
+
+
+
+
+	 ==================================================
+	       Aula 22 PARÂMETROS REST  Média relevançia 
+	 ==================================================
+
+//    -------------------
+//         REST
+//    -------------------
+
+
+// Parametros REST é quando se usa o Spread no parâmetro da função permitindo que se se passe
+// quantos parâmetros forém necessários.
+let res = 0;
+function somar(...valores) {
+    for (const key in valores) {
+            res += valores[key];
+    }
+    return res;    
+}
+
+
+
+	 =========================================
+	       Aula 23 FUNÇÃO Alta relevançia
+	 =========================================
+
+//    ---------------------------------------
+//         FUNÇÕES ANÔNIMAS E CONTRUTORAS
+//    ---------------------------------------
+
+let res = 0;
+
+//Funções anônimas não ocupam espaço na memória são criadas quando chamadas
+const somar = function (...valores) {
+    for (const key in valores) {
+            res += valores[key];
+    }
+    return res;    
+}
+
+console.log(somar(10,2, 20, 32))
+
+// Função CONSTRUTOR deve ser criada com [ new Function ] function com o F maiúsculo
+// e passado os valores e o corpo da função como argumento.
+const s = new Function ("v1","v2","return v1 * v2");
+console.log(s(10,35));
+
+
+
+
+
+	 =========================================
+	       Aula 24 FUNÇÃO Alta relevançia
+	 =========================================
+
+//    ---------------------------------------
+//         Arrow Function
+//    ---------------------------------------
+
+
+
+let res = 0;
+let somar = (...valores) => {
+    for (const key in valores) {
+            res += valores[key];
+    }
+    return res;    
+}
+
+console.log(somar(15,12,31,65,15));
+
+// Quando a arrow function tiver apenas uma linha e um parâmetro pode-se dispensar o () e o {}
+let n=n1=>n1+n1;
+console.log(n(15));
+
+// Quando a arrow function tiver apenas uma linha e mais de um parâmetro pode-se dispensar o {}
+let nt=(n1,n2)=>n1*n2;
+console.log(nt(15,15));
