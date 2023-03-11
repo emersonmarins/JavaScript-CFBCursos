@@ -563,3 +563,81 @@ console.log(n(15));
 // Quando a arrow function tiver apenas uma linha e mais de um parâmetro pode-se dispensar o {}
 let nt=(n1,n2)=>n1*n2;
 console.log(nt(15,15));
+
+
+
+	 ==================================================
+	       Aula 26 FUNÇÃO Callback Alta relevançia
+	 ==================================================
+
+//    ---------------------------------------
+//              Funções de callback
+//    ---------------------------------------
+
+// Um exemplo para descontrair!!! gosto de usar funções de callback para deixar o código mais claro de se ler e organizado
+// já que se um bloco de código de uma determinada função tiver dezenas ou até centenas de linhas 
+// pode se torna de difícil legibilidade e leiturabilidade!
+
+
+// Callback hall 
+function operacao(...valores) {
+    function operacao7(...valores7){
+        function operacao6(...valores6) {
+            function operacao5(...valores5) {
+                function operacao4(...valores4) {
+                    function operacao3(...valores3) {
+                        function operacao2(...valores2) {
+                            function operacao1(...valores1) {
+                                let res = 0; 
+                                for (let iterator of valores1) {
+                                    res += iterator; 
+                                }return res
+                            }
+                            return operacao1(...valores2);
+                        }
+                        return operacao2(...valores3);
+                    }
+                    return operacao3(...valores4);    
+                }
+                return operacao4(...valores5);             
+            }
+            return operacao5(...valores6); 
+        }
+        return operacao6(...valores7);  
+    }
+    return operacao7(...valores);
+};
+
+
+console.log(operacao(10,5,15,55,77));
+
+
+
+
+
+	 ==================================================
+	       Aula 27 FUNÇÃO Geradoras Alta relevançia
+	 ==================================================
+
+//    ---------------------------------------
+//             Geradoras ITERATOR
+//    ---------------------------------------
+
+//Cada variável funciona como parâmetro, quando se chama pela primeira vez retorna
+//o que foi atribuído dentro da variável, quando chamado pela segunda vez os parâmetros
+//passados pelo next começão a substituí as atribuições da variáveis.
+
+
+function* perguntas() {
+    const nome = yield 'Qual é o seu nome?';
+    const esporte = yield 'Qual seu esporte favorito?';
+    return `Olá ${nome} seu espote favorito é ${esporte}`;
+};
+
+
+
+//primeiro declara o interator [ itp ]
+let itp = perguntas();
+console.log(itp.next().value);
+console.log(itp.next('Emerson').value);
+console.log(itp.next('Xadrez').value);
