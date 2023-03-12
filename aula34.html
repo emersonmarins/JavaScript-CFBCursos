@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListenner</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+        background-color: rgb(214, 245, 183);
+        perspective: 1000px;
+    }
+    .container-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        max-width: 800px;
+        min-height: 400px;
+        margin: 20px auto;
+        transform-style: preserve-3d;
+    }
+    div > div{
+        font-size: 20px;
+        padding: 10px;
+        width: 300px;
+        background-color: chartreuse;
+        text-align: center;
+        margin: auto;
+        border-radius: 7px;
+        border: 1px solid black;
+        
+    }
+    div > div:hover{
+        
+        box-sizing: border-box;
+        box-shadow:inset 0px 1px 3px 1px black;
+        color: rgb(70, 122, 9);
+        cursor: pointer;
+    }
+
+    .animate1 {
+        /* transform: rotateY(80deg); */
+        animation: rotate .5s normal both ease-in-out;
+    }
+  
+    @keyframes rotate {
+        0%{
+            transform: rotateY(0deg);
+           
+        }
+    
+        100% {
+            transform: rotateY(360deg) rotateX(0deg);
+    
+        }
+    }
+
+</style>
+<body>
+    <div class="container-principal">
+        <h1>Conhecimentos nas Tecnologias:</h1>
+        <div class="class1">HTML</div>
+        <div class="class2">CSS</div>
+        <div class="class3">Javascript</div>
+        <div class="class4">Node.JS</div>
+        <div class="class5">Express</div>
+        <div class="class6">MongoDB</div>
+        <div class="class7">MySQL</div>
+        <div class="class8">PHP</div>
+        <div class="class9">Sequelize</div>
+        <div class="class10">GitHub</div>
+    </div>
+
+    <script src="aula34.js"></script>
+</body>
+</html>

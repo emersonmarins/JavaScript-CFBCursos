@@ -1,3 +1,9 @@
+//    ----------------------------
+//        Functions Geradoras
+//    ----------------------------
+
+
+
 //Cada variável funciona como parâmetro, quando se chama pela primeira vez retorna
 //o que foi atribuído dentro da variável, quando chamado pela segunda vez os parâmetros
 //passados pelo next começão a substituí as atribuições da variáveis.
