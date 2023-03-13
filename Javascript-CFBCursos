@@ -822,3 +822,68 @@ box1_array.addEventListener('click',(e)=> {
 });
 
 
+
+
+
+      ===============================================================
+	       Aula 37-38 relação elemento DOM Alta relevância
+      ===============================================================
+
+//    -----------------------------
+//        relação elemento DOM
+//    -----------------------------
+
+// Quando se vai manipular o DOM existe uma diversidade grande de formas para manipula-lo, por isso é bom 
+// acompanhar com o DEVTOOLS as propriedades e métodos disponíveis na hora de manipular.
+
+
+
+
+
+      ===============================================================
+	       Aula 39-40 alterando elementos DOM Alta relevância
+      ===============================================================
+
+//    -----------------------------
+//       alterando elementos DOM
+//    -----------------------------
+
+
+
+const div_el = document.createElement('div');
+div_el = document.createAttribute('id', '15');
+div_el.classList.add('classe-da-div');
+
+
+
+
+
+      ===============================================================
+	       Aula 41 removendo elementos DOM Alta relevância
+      ===============================================================
+
+//    -----------------------------
+//       removendo elementos DOM
+//    -----------------------------
+
+// Removendo elementos do DOM
+  
+   box_div_array.removeChild(div_el);
+// 2ª Forma
+   div_el.remove();
+   
+
+
+
+
+
+      ===============================================================
+	       Aula 42 FILTER DOM Alta relevância
+      ===============================================================
+//    ---------------------
+//        método Filter
+//    ---------------------
+const idades = [10,15,64,87,98,65,45,61,31,81,15,64,89,34,23,56,78,12,61,3,2,12,46,35];
+
+// idades.filter((elemento,index,arr)=> {})
+
