@@ -25,11 +25,15 @@ function createElement(curso) {
 
 }
 
+
+
+// Capture Events
 btn_add.addEventListener('click', (e)=> {
     
     console.log(e);
     console.log(input.value);
     input.value.length > 0 ? createElement(input.value) : alert('Digite o nome do curso!');
+    input;
 });
 
 btn_remove.addEventListener('click', (e)=> {
@@ -51,6 +55,7 @@ btn_check.addEventListener('click', (e)=> {
     let checkbox = [...document.querySelectorAll('input[type=checkbox]')];
     let section = document.querySelector('.box2');
     checkbox.filter((evt,index)=> {
+
         if (evt.checked) {
             evt.parentElement.classList.toggle('background');
         }
@@ -61,3 +66,11 @@ btn_check.addEventListener('click', (e)=> {
     console.log(input.value);
     // input.value.length > 0 ? createElement(input.value) : alert('Digite o nome do curso!');
 });
+
+
+// parentNode
+// childNodes[nodenumber]
+// firstChild
+// lastChild
+// nextSibling
+// previousSibling
