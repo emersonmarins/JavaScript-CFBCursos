@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Propagation</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         body {
+            background: rgb(47, 47, 47);
+
+        }
+
+        .container-principal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 50px ;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            background-color: rgb(70, 70, 70);
+            box-shadow: 0px 1px 3px 2px black;
+            border-radius: 14px;
+            width: 400px;
+            height: 700px;
+        }
+
+        .title-curso {
+        align-self: center;
+        font-size: 1.7em;
+        width: 280px;
+        margin: 100px 0 20px;
+        color: rgb(0, 221, 195);
+        box-shadow: inset 0px 1px 3px 1px black;
+        padding: 7px 0;
+        text-align: center;
+        text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.489);
+
+        }
+
+        .text {
+
+            width: 280px;
+            height: 50px;
+            text-align: center;
+            border-radius: 3px;
+            margin: 0px auto 30px;
+            box-shadow: inset 0px 1px 1px 1px rgb(0, 0, 0);
+            background-color: rgb(15, 15, 15);
+            font-size: 17px;
+            font-weight: bolder;
+            color: rgb(200, 200, 200);
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        .buttons>button {
+
+            width: 250px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 7px;
+            margin: 10px;
+            background: rgb(0, 169, 149);
+            /* box-shadow: 0px 1px 1px 1px black; */
+            box-shadow: inset 0px 1px 1px 1px rgba(0, 0, 0, 0.545);
+            font-size: 17px;
+            font-weight: bolder;
+            color: rgb(11, 10, 0);
+        }
+
+        .buttons>button:hover {
+            background-color: rgb(69, 69, 69);
+            cursor: pointer;
+        }
+
+        .box2 {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(70, 70, 70);
+            box-shadow: 0px 1px 3px 2px black;
+            border-radius: 14px;
+            width: 400px;
+            height: 700px;
+            margin: auto;
+        }
+
+        section>.class {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 19px;
+            padding: 0 10px;
+            width: 300px;
+            height: 40px;
+            color: rgb(0, 221, 195);
+            text-align: center;
+            margin: 10px auto;
+            border-radius: 7px;
+            border: 1px solid black;
+
+        }
+        .box2 > .background {
+            background-color: rgb(0, 255, 225);
+            color: rgb(0, 75, 75);
+        }
+
+        section>div {
+            box-shadow: inset 0px 1px 3px 1px black;
+            padding: 10px 5px;
+
+        }
+
+        section>div:hover {
+
+            color: rgb(70, 122, 9);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-principal">
+        <section class="box1">
+            <h3 class="title-curso">Digitar novo Curso</h3>
+            <input class="text" type="text" name="" placeholder="Nome do Curso" id="input-curso">
+            <div class="buttons">
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-add-antes">Adicionar Antes</button>
+                <button class="btn-add-depois">Adicionar Depois</button>
+                <button class="btn-remove">Remover Selecionado</button>
+                <button class="btn-check">Marca Curso</button>
+            </div>
+        </section>
+        <section class="box2">                
+            <div class="class"><p>HTML</p> <input type="checkbox" name="" id=""> </div>
+            <div class="class"><p>CSS</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>Javascript</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>Node.JS</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>Express</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>MongoDB</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>MySQL</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>PHP</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>Sequelize</p><input type="checkbox" name="" id=""></div>
+            <div class="class"><p>GitHub</p><input type="checkbox" name="" id=""></div>
+        </section>
+    </div>
+    <script src="aula44.js"></script>
+</body>
+</html>

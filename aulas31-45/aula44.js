@@ -1,14 +1,16 @@
 let input = document.querySelector('#input-curso');
 const btn_add = document.querySelector('.btn-add');
+const btn_add_antes = document.querySelector('.btn-add-antes');
+const btn_add_depois = document.querySelector('.btn-add-depois');
 const btn_remove = document.querySelector('.btn-remove');
 const btn_check = document.querySelector('.btn-check');
 
 
 
-function createElement(curso) {
-    
+function createElement(curso, options) {
+    let checkbox = [...document.querySelectorAll('input[type=checkbox]')];
+
     const section = document.querySelector('.box2');
-    // console.log(section);
     // Create Elements
     let div = document.createElement('div');
     let p = document.createElement('p');
@@ -17,12 +19,32 @@ function createElement(curso) {
     // Set Attributes
     div.classList.add('class');
     input.setAttribute('type', 'checkbox');
-
+    p.innerText = curso;
+    
     // Add AppendChild 
-    section.appendChild(div);
     div.appendChild(p);
     div.appendChild(input);
-    p.innerText = curso;
+
+    if (options == "antes") {
+        checkbox.filter((element, index) => {
+            
+            if (element.checked) {
+                console.log(element.parentElement);
+                section.insertBefore(div, element.parentElement)
+            }
+        });
+    } else if (options == "depois"){
+        checkbox.filter((element) => {
+            
+            if (element.checked) {
+                console.log(element.parentElement);
+                element.parentElement.after(div);
+            }
+        });
+
+    }else {
+    section.appendChild(div);
+    }
 
 
 }
@@ -31,8 +53,27 @@ function createElement(curso) {
 
 // Capture Events
 btn_add.addEventListener('click', (e)=> {
-    
-    input.value.length > 0 ? createElement(input.value) : alert('Digite o nome do curso!');
+    const options = "a";
+    // Tratamento de erro
+    input.value.length > 0 ? createElement(input.value,options) : alert('Digite o nome do curso!');
+    input.value = "";
+    input.focus();
+
+});
+
+btn_add_antes.addEventListener('click', (e)=> {
+    const options = "antes";
+    // Tratamento de erro
+    input.value.length > 0 ? createElement(input.value,options) : alert('Digite o nome do curso!');
+    input.value = "";
+    input.focus();
+
+});
+
+btn_add_depois.addEventListener('click', (e)=> {
+    const options = "depois";
+    // Tratamento de erro
+    input.value.length > 0 ? createElement(input.value, options) : alert('Digite o nome do curso!');
     input.value = "";
     input.focus();
 
