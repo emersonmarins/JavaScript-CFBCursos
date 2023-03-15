@@ -1,3 +1,7 @@
+//    -----------------------------
+//       removendo elementos DOM
+//    -----------------------------
+
 let input = document.querySelector('#input-curso');
 const btn_add = document.querySelector('.btn-add');
 const btn_add_antes = document.querySelector('.btn-add-antes');

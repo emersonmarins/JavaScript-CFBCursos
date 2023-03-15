@@ -878,7 +878,7 @@ div_el.classList.add('classe-da-div');
 
 
       ===============================================================
-	       Aula 42 FILTER DOM Alta relevância
+	       Aula 42-43 FILTER DOM Alta relevância
       ===============================================================
 //    ---------------------
 //        método Filter
@@ -887,3 +887,164 @@ const idades = [10,15,64,87,98,65,45,61,31,81,15,64,89,34,23,56,78,12,61,3,2,12,
 
 // idades.filter((elemento,index,arr)=> {})
 
+
+
+
+
+
+
+      ===============================================================
+	       Aula 44 removendo elementos DOM Alta relevância
+      ===============================================================
+//    -----------------------------
+//       removendo elementos DOM
+//    -----------------------------
+
+
+section.removeChild(div_pai);
+section.remove();
+
+
+
+
+
+      ===============================================================
+	       Aula 45 CREATE ELEMENT DOM Alta relevância
+      ===============================================================
+//    ---------------------
+//        CREATE ELEMENT
+//    ---------------------
+
+const div_el = document.createElement('div');
+
+
+
+
+
+      ===============================================================
+	       Aula 46 TOGGLE Alta relevância
+      ===============================================================
+//    ---------------------
+//        CREATE ELEMENT
+//    ---------------------
+
+div_el.classList.toggle("hidde");
+
+
+
+
+
+      ===============================================================
+	       Aula 47 MÉTODO FIND Alta relevância
+      ===============================================================
+//    ---------------------
+//        método Find
+//    ---------------------
+
+
+Percorrer um array e retorna true quando achar a primeira ocorrencia 
+
+const res = array.find((element, index) => {
+	if(element == 10) {
+		return element;
+	}
+});
+
+
+
+
+      ===============================================================
+	       Aula 48 MÉTODO EVERY Alta relevância
+      ===============================================================
+//    ---------------------
+//        método EVERY
+//    ---------------------
+
+Verifica se cada elemento do array obedecem as regras requeridas, retorna true ou false e o index
+
+const res = array.every((element, index) => {
+	if(element >= 10) {
+		return element;
+	}
+});
+
+
+
+
+
+
+      ===============================================================
+	       Aula 49 MÉTODO SOME Alta relevância
+      ===============================================================
+//    ---------------------
+//        método SOME
+//    ---------------------
+
+Verifica quel elemento do array obedecem as regras requeridas, se achar pelomenos um elemento
+conforme retorna true ou false se não achar nenhum e o index caso querira
+
+const res = array.some((element, index) => {
+	if(element >= 10) {
+		return element;
+	}
+});
+
+
+
+
+
+
+      ===============================================================
+	       Aula 50 MÉTODO REDUCE Alta relevância
+      ===============================================================
+//    ---------------------
+//        método REDUCE
+//    ---------------------
+
+const array_number = [1,6,16,161,1,5615,165,165,8,91,615,16,1,56,165,156,8,15]
+
+
+const res = array_number.reduce((anterior,atual,index) => {
+    return anterior+atual;
+});
+
+console.log(res);
+
+
+
+
+
+
+
+
+      ===============================================================
+	       Aula 51 MÉTODO REDUCE Alta relevância
+      ===============================================================
+
+//    -------------------
+//        Interadores
+//    -------------------
+
+
+/**
+ * Funções como find() e map() que trabalhão com interator, precisão percorrer o array portanto o done indica
+ * se já chegou o final do array e o value mostra o valor do elemento que ele está interando 
+ */
+ 
+ 
+ 
+ 
+ 
+ 
+      ===============================================================
+	       Aula 52 ARRAY Alta relevância
+      ===============================================================
+ 
+ //    -------------------
+//        Arrays
+//    -------------------
+
+
+// Arrays, quando se tem um array dentro de outro array temos um conceito de [  MATRIZES  ]
+let cores = ["azul","verde","vermelho","amarelo",["flores","pétalas","rosas"]];
+let cursos = ["PHP","Javascript","Python","CSS","HTML",cores]

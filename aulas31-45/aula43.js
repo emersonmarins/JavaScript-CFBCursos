@@ -1,3 +1,6 @@
+//    ---------------------
+//        método Filter
+//    ---------------------
 let input = document.querySelector('#input-curso');
 const btn_add = document.querySelector('.btn-add');
 const btn_remove = document.querySelector('.btn-remove');

@@ -1,3 +1,7 @@
+//    -----------------------------------------------
+//        Create Element || método Find || TOGGLE
+//    -----------------------------------------------
+
 let input = document.querySelector('#input-curso');
 const btn_add = document.querySelector('.btn-add');
 const btn_add_antes = document.querySelector('.btn-add-antes');
@@ -5,6 +9,9 @@ const btn_add_depois = document.querySelector('.btn-add-depois');
 const btn_remove = document.querySelector('.btn-remove');
 let box_div_All = [...document.querySelectorAll('.box2 >div')];
 let div_box2 = document.querySelector('.box2');
+let btn_search = document.querySelector('.bi-search');
+let input_search = document.querySelector('.nav-bar > input');
+let output_text = document.querySelector('#output-text');
 
 
 
@@ -48,6 +55,22 @@ function createElement(curso, options) {
 
 
 // Capture Events
+
+// Search
+btn_search.addEventListener("click", (e)=> {
+    console.log(input_search.value);
+    let res = box_div_All.find((element, index) => {
+        if (element.innerText.toLowerCase() == input_search.value.toLowerCase()) {
+            return element
+        } else {
+            console.log('não encontrado');
+        }
+    });
+    output_text.parentElement.classList.remove('hidde');
+    output_text.value = res.innerText;
+    console.log(res.innerText);
+})
+
 btn_add.addEventListener('click', (e)=> {
     const options = "a";
     // Tratamento de erro
