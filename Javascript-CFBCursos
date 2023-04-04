@@ -672,7 +672,7 @@ console.log(itp.next('Xadrez').value);
 // A arrow function usa o contexto do pai por isso não dá undefined
 
 // O setTimeout cria uma nova instancia do THIS por isso ele 
-// não tem os falores do elemento pai quando se pede para mostrar com 
+// não tem os valores do elemento pai quando se pede para mostrar com 
 // o comando console.log, para contorna essa situação se utiliza a arrow function 
 
 
@@ -980,8 +980,7 @@ const res = array.every((element, index) => {
 //        método SOME
 //    ---------------------
 
-Verifica quel elemento do array obedecem as regras requeridas, se achar pelomenos um elemento
-conforme retorna true ou false se não achar nenhum e o index caso querira
+Verifica qual elemento do array obedecem as regras requeridas, se achar pelo menos um elemento conforme as regras retorna true ou false se não achar nenhum e o index caso queira
 
 const res = array.some((element, index) => {
 	if(element >= 10) {
